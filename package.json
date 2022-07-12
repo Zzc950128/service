@@ -1,14 +1,31 @@
 {
   "name": "service",
   "version": "1.0.0",
-  "description": "",
+  "description": "service-template",
   "main": "index.js",
   "scripts": {
-    "start": "echo \"Start...\" && exit 1"
+    "start": "node ./bin/www",
+    "dev": "pm2 start ecosystem.config.js --env dev",
+    "test": "pm2 start ecosystem.config.js --env test",
+    "pro": "pm2 start ecosystem.config.js --env pro",
+    "logs": "pm2 logs",
+    "stop": "pm2 stop ecosystem.config.js"
   },
   "author": "zzc",
   "license": "ISC",
   "dependencies": {
-    "koa": "^2.13.4"
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.13.4",
+    "koa-bodyparser": "^4.3.0",
+    "koa-generic-session": "^2.3.0",
+    "koa-helmet": "^6.1.0",
+    "koa-jwt": "^4.0.3",
+    "koa-redis": "^4.0.1",
+    "koa-router": "^11.0.1",
+    "koa-static-cache": "^5.1.4",
+    "koa2-cors": "^2.0.6",
+    "log4js": "^6.5.2",
+    "mongoose": "^6.4.3",
+    "redis": "^4.2.0"
   }
 }
